@@ -5,45 +5,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="HTML, CSS">
-    <meta name="description" content="Web tutorials for HTML and CSS">
-    <meta name="author" content="ShinChan">
-    <title>News</title>
+    <title>Forms</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="img.png" type="image/x-icon">
 </head>
 
 <body>
-    <main id="main">
-        <h1 id="title">GObak Sodor</h1>
-        <p>Gobak sodor atau galah asin adalah</p>
-        <figure id="img-div">
-            <img id="image" src="gobak sodor.jpg" alt="gobak sodor">
-            <fieldset id="img-caption">
-                sejenis permainan daerah dari Indonesia.
-            </fieldset>
-        </figure>
-        <section id="tribute-info">
-            <h3>Heading</h3>
-            <p>Permainan ini adalah sebuah permainan grup yang terdiri dari dua grup, di mana masing-masing tim terdiri
-                dari 3 - 5 orang. Inti permainannya adalah menghadang lawan agar tidak bisa lolos melewati garis ke
-                baris terakhir secara bolak-balik, dan untuk meraih kemenangan seluruh anggota grup harus secara lengkap
-                melakukan proses bolak-balik dalam area lapangan yang telah Ada
-
-                Permainan ini biasanya dimainkan di lapangan bulu tangkis dengan acuan garis-garis yang ada atau bisa
-                juga dengan menggunakan lapangan segiempat dengan ukuran 9 x 4 m yang dibagi menjadi 6 bagian. Garis
-                batas dari setiap bagian biasanya diberi tanda dengan kapur. Anggota grup yang mendapat giliran untuk
-                menjaga lapangan ini terbagi dua, yaitu anggota grup yang menjaga garis batas horisontal dan garis batas
-                vertikal. Bagi anggota grup yang mendapatkan tugas untuk menjaga garis batas horisontal, maka mereka
-                akan berusaha untuk menghalangi lawan mereka yang juga berusaha untuk melewati garis batas yang sudah
-                ditentukan sebagai garis batas bebas. Bagi anggota grup yang mendapatkan tugas untuk menjaga garis batas
-                vertikal (umumnya hanya satu orang), maka orang ini mempunyai akses untuk keseluruhan garis batas
-                vertikal yang terletak di tengah lapangan. Permainan ini sangat mengasyikkan sekaligus sangat sulit
-                karena setiap orang harus selalu berjaga dan berlari secepat mungkin jika diperlukan untuk meraih
-                kemenangan. <strong> Sumber
-                    <a id="tribute-link" href="" target="_blank">Wiki</a></strong></p>
-        </section>
-    </main>
+    <div class="container">
+        <div class="header">
+            <h1 id="title">FORMULIR</h1>
+            <p id="description">trimakasi atas partisipasinya</p>
+        </div>
+        <form id="survey-form" action="_blank" method="post">
+            <div class="form">
+                <label id="name-label" for="name">Nama:</label>
+                <br><input type="text" id="name" class="grup" name="name" placeholder="Masukan Nama" minlength="4"
+                    maxlength="35" required><br><br>
+                <label id="email-label" for="email">Email:</label>
+                <br><input type="email" id="email" class="grup" name="email" placeholder="Masukkan Email"
+                    required><br><br>
+                <label id="number-label" for="number">Umur:</label>
+                <br><input type="number" id="number" class="grup" name="age" min="17" max="67"><br>
+                <p>Olahraga<small>(gag di pilih yo gag popo)</small></p>
+                <select class="grup" name="dropdown" id="dropdown">
+                    <option disabled selected value>Pilih Salah Satu</option>
+                    <option value="Sepak Bola">sepak-bola</option>
+                    <option value="Tenis Meja">Tenis Meja</option>
+                    <option value="Bulu Tangkis">Bulu Tangkis</option>
+                    <option value="Basket">Basket</option>
+                    <option value="Softbol">Softbol</option>
+                    <option value="Tinju">Tinju</option>
+                    <option value="Dll">Dll</option>
+                </select>
+                <p>Olahraga Apa Yang Pernah Andah Lakukan</p>
+                  <input type="radio" id="radio-satu" name="radio-satu" value="Sepak Bola">
+                  <label for="radio-satu">Sepak Bola</label>
+                <br>
+                  <input type="radio" id="radio-dua" name="radio-dua" value="Tenis Meja">
+                  <label for="radio-dua">Tenis Meja</label>
+                <br>
+                  <input type="radio" id="radio-tiga" name="radio-tiga" value="Bulu Tangkis">
+                  <label for="radio-tiga">Bulu Tangkis</label>
+                <br>
+                  <input type="radio" id="radio-lima" name="radio-lima" value="Basket">
+                  <label for="radio-lima">Basket</label>
+                <br>
+                  <input type="radio" id="radio-enam" name="radio-enam" value="Softbol">
+                  <label for="radio-enam">Softbol</label>
+                <br>
+                  <input type="radio" id="radio-tujuh" name="radio-tujuh" value="Tinju">
+                  <label for="radio-tujuh">Tinju</label>
+                <br>
+                  <input type="radio" id="radio-delapan" name="radio-delapan" value="Dll">
+                  <label for="radio-delapan">Dll</label>
+                <div class="check">
+                    <p>Tujuan Olahraga</p>
+                    <input type="checkbox" id="sepak-bola" name="sepak-bola" value="Cari Uang">
+                    <label for="sepak-bola">Cari Uang</label>
+                    <br>
+                    <input type="checkbox" id="vehicle2" name="vehicle2" value="Bersenag senang">
+                    <label for="vehicle2">Bersenag senang</label>
+                    <br>
+                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Cita Cita">
+                    <label for="vehicle3">Cita Cita</label>
+                    <br>
+                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Dll">
+                    <label for="vehicle1">Dll</label>
+                </div>
+                <p>Keterangan</p>
+                <textarea class="cmt" placeholder="Tulis Di Sini" required></textarea><br>
+                <input id="submit" type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>
